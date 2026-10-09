@@ -1,0 +1,13 @@
+{
+  "schema_version": "stateaxis-mod-provenance/v1",
+  "source_repository": "Qixin-Gaoke/stateaxis",
+  "source_commit": "7562b5fa6f42e2e045a877b53ac934739e2cf230",
+  "source_issues": [
+    59
+  ],
+  "source_evidence": "docs/history/reports/ISSUE59_ON_DEVICE_SAMPLING_CLOSURE_20260816.md",
+  "copied_evidence": "evidence/ISSUE59_ON_DEVICE_SAMPLING_CLOSURE_20260816.md",
+  "copied_evidence_sha256": "59b52c922c2f83a68e9e9dddf0ffda0d302ecfe49d31ec40b85c2020e81ee5c4",
+  "qualification_inherited": false,
+  "implementation_extracted": false
+}
