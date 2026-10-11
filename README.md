@@ -2,41 +2,34 @@
 
 Extension ID: `org.vllm-hust.stateaxis-on-device-sampling`
 
-On-device categorical/beam sampling, penalties, logprobs and deterministic RNG.
+Experimental, default-off authority for StateAxis categorical and bounded beam
+sampling. The Extension Manager/ECPA verifies the research digest and supplies
+the only activation payload; without it, StateAxis rejects explicit non-greedy
+sampling while preserving the canonical greedy path.
 
-This repository is the independent MOD boundary for StateAxis issues [#59](https://github.com/Qixin-Gaoke/stateaxis/issues/59).
-It is deliberately `import_only`, default-off, and cannot be enabled. The split does
-not inherit correctness, device, performance, or publication qualification from the
-aggregate StateAxis repository.
+The admitted contract keeps logits processors and token selection on device,
+returns only the selected token and a bounded ranked prefix, forbids a full
+vocabulary host copy, and binds sampling configuration plus RNG offset into
+continuation identity. Beam width is capped at 8 and returned logprobs at 20.
 
 ## Evidence boundary
 
-Status: **negative**.
+Historical Qwen2.5-14B real-NPU evidence passed exactness over 48 measured
+requests, but the fresh-process matched cell regressed throughput by 14.654%
+and p95 latency by 80.131%. Steady device sampling took roughly 0.356--0.359 ms;
+first use took 76.8--79.7 ms. This is a scoped negative result, not a universal
+claim about other models or workloads, so the MOD remains experimental and
+performance-unqualified.
 
-Correctness passed and steady-state sampling was about 0.36 ms, but fresh-process first-call cost caused a 14.654% throughput regression.
-
-The copied evidence and its SHA-256 are recorded in `PROVENANCE.json`. Negative,
-failed, and inconclusive results are retained. Microbenchmarks and component results
-must not be restated as online end-to-end gains.
-
-## Install and inspect
-
-```bash
-python -m pip install .
-vllm-hust-ext extension inspect org.vllm-hust.stateaxis-on-device-sampling
-vllm-hust-ext extension check org.vllm-hust.stateaxis-on-device-sampling
-```
-
-Discovery does not enable the MOD. A future active revision must extract an
-independently reviewable implementation, declare exclusive resources where needed,
-and pass exactness, lifecycle, release, failure-recovery, and matched real-online
-gates.
-
-## Validate
+Current ECPA evidence covers digest binding, default-off refusal, ON effect
+counters, continuation identity, bounded beam cleanup, and Manager launch
+composition. See `EVIDENCE.md`.
 
 ```bash
 python -m pip install -e '.[test]'
 pytest -q
+VLLM_HUST_EXT_CONFIG=evidence/ecpa-contract-20261011/manager-config.json \
+  vllm-hust-ext extension check org.vllm-hust.stateaxis-on-device-sampling
 ```
 
 Maintainer: Shuhao Zhang (Tony), directly responsible; no advisor is declared.
