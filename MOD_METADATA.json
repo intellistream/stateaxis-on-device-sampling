@@ -18,26 +18,29 @@
   "lifecycle": {
     "status": "experimental",
     "default_enabled": false,
-    "activation_contract": "Import-only research descriptor; activation is refused until the StateAxis host contract and independent implementation are reviewed.",
-    "rollback_contract": "Disable or forget the descriptor and run the unchanged StateAxis host without this MOD."
+    "activation_contract": "Extension Manager verifies RESEARCH_MANIFEST.json and forwards the hash-bound bounded sampling contract; StateAxis admits explicit non-greedy sampling only with that identity.",
+    "rollback_contract": "Disable the extension; StateAxis preserves canonical greedy generation and rejects explicit categorical or beam requests."
   },
   "scope": {
     "mechanism": "device_sampling_and_logits_processing",
-    "supported_workloads": [],
+    "supported_workloads": [
+      "explicit categorical sampling with deterministic continuation RNG",
+      "bounded beam search with device-side processors and ranked-prefix return"
+    ],
     "out_of_scope": [
       "general performance claims",
       "automatic inheritance from StateAxis aggregate evidence"
     ]
   },
   "evidence": {
-    "qualification": "not-beneficial-in-tested-cell",
-    "latest_result": "evidence/ISSUE59_ON_DEVICE_SAMPLING_CLOSURE_20260816.md",
+    "qualification": "historical-real-npu-fresh-process-negative",
+    "latest_result": "evidence/ecpa-contract-20261011/RESULT.json",
     "index": "EVIDENCE.md",
     "performance_claims": [
       {
-        "label": "not-beneficial-in-tested-cell",
-        "scope": "frozen StateAxis source evidence only",
-        "result": "Correctness passed and steady-state sampling was about 0.36 ms, but fresh-process first-call cost caused a 14.654% throughput regression."
+        "label": "historical-real-npu-fresh-process-negative",
+        "scope": "Qwen2.5-14B issue #59 frozen three-pair real-NPU cell",
+        "result": "Exactness passed, but candidate request throughput regressed 14.654% and p95 latency increased 80.131% in the tested fresh-process cell."
       }
     ]
   }

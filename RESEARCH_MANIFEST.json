@@ -1,0 +1,22 @@
+{
+  "schema_version": "stateaxis-research-manifest/v1",
+  "mod_id": "org.vllm-hust.stateaxis-on-device-sampling",
+  "mod_version": "0.2.0",
+  "mechanism": {
+    "authority": "explicit non-greedy sampling requests",
+    "modes": ["categorical", "beam"],
+    "processors": ["temperature", "top-k", "top-p", "min-p", "presence penalty", "frequency penalty", "repetition penalty"],
+    "device_output": "selected token and bounded ranked prefix only; no full-vocabulary host copy",
+    "identity": ["sampling configuration", "categorical RNG offset", "state continuation"],
+    "bounds": {"beam_width": 8, "return_logprobs": 20},
+    "fail_closed": true
+  },
+  "host_implementation": "statecentric_engine:parse_on_device_sampling_additional_config",
+  "effect_evidence": ["sampling_steps", "sampling_total_ns", "sampling_transfer_bytes", "beam_sequences"],
+  "qualification": {
+    "label": "matched-real-npu-cold-performance-negative",
+    "performance_qualified": false,
+    "scope": "Qwen2.5-14B issue #59 frozen 3+3 fresh-process cell",
+    "result": "functionally exact; request/s -14.654%, p95 latency +80.131%; steady sampling median about 0.359 ms"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "stateaxis-mod-on-off/v1",
+  "date_utc": "2026-10-11",
+  "mod_id": "org.vllm-hust.stateaxis-on-device-sampling",
+  "mod_version": "0.2.0",
+  "research_manifest_sha256": "d41ff2d0bd4d2c96e8a75c9e3f9a8f65cf0fe0e18b93d247520da22448b22cba",
+  "evidence_label": "manager-contract-mock-worker-non-performance",
+  "performance_qualified": false,
+  "hardware_execution": false,
+  "manager": {
+    "check": "passed",
+    "plan": "passed",
+    "dry_run": "passed",
+    "managed_assembly_check_process": "passed",
+    "assembly_identity_sha256": "d44e7bd351e355d89b1c7d59e8a6229380c2e1255b66e5ad2f68b72371938e3f"
+  },
+  "validation": {
+    "python_tests": "3 passed",
+    "rust_sampling_tests": "3 passed",
+    "rust_library_tests": "408 passed",
+    "cargo_check_lib_bins": "passed",
+    "native_state_engine_build": "passed"
+  },
+  "on_effects": {
+    "sampling_authority_requests": 4,
+    "sampling_authority_applied": 4,
+    "sampling_authority_fallbacks": 0,
+    "categorical_continuation_rng_offsets": [1, 2, 3],
+    "beam_temporary_states_remaining": 0
+  },
+  "off_effects": {
+    "canonical_greedy_available": true,
+    "explicit_non_greedy_rejected": true,
+    "sampling_authority_requests": 1,
+    "sampling_authority_applied": 0,
+    "sampling_authority_fallbacks": 1
+  },
+  "historical_real_npu_result": {
+    "model": "Qwen2.5-14B BF16",
+    "fresh_service_arms": 6,
+    "measured_requests": 48,
+    "exact": true,
+    "control_requests_per_second": 16.9508,
+    "candidate_requests_per_second": 14.4669,
+    "candidate_requests_per_second_delta_percent": -14.654,
+    "p95_latency_delta_percent": 80.131,
+    "steady_device_sampling_median_ms_range": [0.356, 0.359],
+    "first_use_ms_range": [76.8, 79.7],
+    "candidate_hbm_delta_mib": 24,
+    "claim": "negative only in the recorded fresh-process Qwen2.5-14B cell"
+  },
+  "limitations": [
+    "current activation-contract run uses a CPU protocol mock worker",
+    "no performance gain claim",
+    "historical negative result is not generalized to untested workloads"
+  ]
+}
