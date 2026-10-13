@@ -1,0 +1,605 @@
+{
+  "schema_version": 1,
+  "evidence_label": "real-hardware-oracle",
+  "claim_status": "torch-npu-reference-only",
+  "model_family": "qwen2-dense",
+  "model_config": {
+    "hidden_size": 5120,
+    "intermediate_size": 13824,
+    "num_hidden_layers": 48,
+    "num_attention_heads": 40,
+    "num_key_value_heads": 8,
+    "head_dim": 128,
+    "rms_norm_eps": 1e-06,
+    "rope_theta": 1000000.0,
+    "vocab_size": 152064,
+    "max_position_embeddings": 32768,
+    "tie_word_embeddings": false,
+    "model_type": "qwen2",
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ]
+  },
+  "checkpoint_path": "/data/datasets/strict-models/Qwen2.5-14B-Instruct",
+  "model_identity_sha256": "425811015c8708208c9efc04c4cfae250c7927a1b04c99dda5a9121caf4bf77f",
+  "dtype": "BF16",
+  "device": "npu:0",
+  "torch_version": "2.10.0+cpu",
+  "torch_npu_version": "2.10.0.post2",
+  "transformers_attention": "eager",
+  "use_cache": false,
+  "token_ids": [
+    1397,
+    64424,
+    44378,
+    5942
+  ],
+  "token_count": 4,
+  "greedy_token_id": 525,
+  "decoder_layer_count": 48,
+  "tensors": {
+    "embedding": {
+      "file": "embedding.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "377c4c773fa6fc4e864a55d8d98fdcc88bed31a4c0d48ecc63165494b479327e"
+    },
+    "layer_00": {
+      "file": "layer_00.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "2c3e82f0ffa350a9f6861c7d9156e02278efa20ca6f22ca168a7c658041f4463"
+    },
+    "layer_01": {
+      "file": "layer_01.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "50874aa44da5bc3234d36cc21656e121f10040d8a74165c638b9b5f455815f9b"
+    },
+    "layer_02": {
+      "file": "layer_02.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "68c0df29a897da180e2f8e125977aa57c1d702d142f8e21867b5dcee86e0bf7a"
+    },
+    "layer_03": {
+      "file": "layer_03.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "20630fca735bf6e6600786597077f6c2fcc837b3ddd9980466cab2e8f8cdbb74"
+    },
+    "layer_04": {
+      "file": "layer_04.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "9a55ca98d9d91824d2c59ef660355e2584283b898349bbb975f6c863cc89406c"
+    },
+    "layer_05": {
+      "file": "layer_05.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "99d9a5f7620312222b7d9e2655a12bf671d160deee0b39836bc77a926b95c3ba"
+    },
+    "layer_06": {
+      "file": "layer_06.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "27dd6833ecb5ce1a9196191e2172ec9f12c54f7e43b5e79a43d039fb5f0c1fda"
+    },
+    "layer_07": {
+      "file": "layer_07.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "2f3e51ddce86b3d3285fbf311c03312da26a4cb8a8453d1eba86570fd2d63b06"
+    },
+    "layer_08": {
+      "file": "layer_08.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "324728b87d1810b8ca6ca40573ed2fa4a1c585a0588736ed17f092f8a547941e"
+    },
+    "layer_09": {
+      "file": "layer_09.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "b1c5cbb488d83ea88e3d667ab3cd9f281cc4b492161cc6909583b8dc6bbcf7e0"
+    },
+    "layer_10": {
+      "file": "layer_10.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "6a00a0227f549fe8b83671a4abab4080886ec1f761f77321affb60132306d9f8"
+    },
+    "layer_11": {
+      "file": "layer_11.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "c4d3a515d9f8e7b29cdd5e57d57aef221050c862b85218232ccc9fae0e24403d"
+    },
+    "layer_12": {
+      "file": "layer_12.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "91fe9b6faa10e91254d44e2be5f4fcabbbac2fcebee6bfbe6ebfccd34537b3cb"
+    },
+    "layer_13": {
+      "file": "layer_13.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "5c8060b3f0faad7ab9d4f3984fafd76f65edaacdff0980df0ee3b3e4aa7b496f"
+    },
+    "layer_14": {
+      "file": "layer_14.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "32c8e4ebec8c4f6116da63d3ea0bf6ee02efd2a2a735d7850f7dfb57871751d1"
+    },
+    "layer_15": {
+      "file": "layer_15.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "513bd32885568d5279e4b478b2768effb7cdb0e269d7c736dacfbbffa375a209"
+    },
+    "layer_16": {
+      "file": "layer_16.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "2ed6240149abf8ef7baec6fe0c9825d0408ead67ee366efa8f9ac22fc382fd8c"
+    },
+    "layer_17": {
+      "file": "layer_17.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "fae1ad9f44f50897a41de89352729f7aa67ae1ee9a9abd9d9fa1662815262dc5"
+    },
+    "layer_18": {
+      "file": "layer_18.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "44cf6627ba84fa70ce9a8d28887e55a895c0f56c45355efdd4f69ceba899cfa1"
+    },
+    "layer_19": {
+      "file": "layer_19.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "a0a6e34e28af2a62c04ebe27abd27b3ffebe67a44c9c794993a5d43c25ed80f8"
+    },
+    "layer_20": {
+      "file": "layer_20.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "8e01df1944c72b1b8cbb466603b633db2db00403c5a619ac48a9ff71b717d77f"
+    },
+    "layer_21": {
+      "file": "layer_21.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "e878fe4aa6e00786f92a3e7055876679a4fe5e0cb8ee948b8595108d6eb1cc36"
+    },
+    "layer_22": {
+      "file": "layer_22.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "5f0da5416cd3e0541d501fdda6cb8209fadf4f8365da37691856c9366beb3046"
+    },
+    "layer_23": {
+      "file": "layer_23.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "b5c65bdc6f083e69031a0406265db2449f3361610662a7c2598954ce833d5a18"
+    },
+    "layer_24": {
+      "file": "layer_24.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "618c466f51ba0e7c098a4b49efcb6b9621711a0ac024ca45a4845d983c9a8078"
+    },
+    "layer_25": {
+      "file": "layer_25.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "2bb3a5f7718f8cf91ec232c3171d4544943d9f731844999d80900be3d3afa7d4"
+    },
+    "layer_26": {
+      "file": "layer_26.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "bb00954895e05e61f3b0b7b29f90704c8f4c412ef258f0ed91f76bf5265809de"
+    },
+    "layer_27": {
+      "file": "layer_27.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "504e32f0172cdb85fb3cca28dbae3a5818a1c6f3fc36cb0f870988ef319d2518"
+    },
+    "layer_28": {
+      "file": "layer_28.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "8134b7b098d491c80b6b97fd20caf2196e8da07e4a4d94657f76cd4f097b562e"
+    },
+    "layer_29": {
+      "file": "layer_29.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "2cc85eac77bda5c83780f8a8fe6133871837427cf811104607de2375812cb19b"
+    },
+    "layer_30": {
+      "file": "layer_30.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "8846accef1002a7c5ad5678729c459d586b65296f30ae4ec2ad4b04c70f6906b"
+    },
+    "layer_31": {
+      "file": "layer_31.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "1a1f38449d0332c36800cb8590866b2483a3cfcef40f5b789b91cb1bc4bc1142"
+    },
+    "layer_32": {
+      "file": "layer_32.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "6e9435a1437e4b8be3d7daeb760ae2c6d77fee8c4fc315f63005a7361c75f002"
+    },
+    "layer_33": {
+      "file": "layer_33.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "d7df03b325bf9fa8ec8c3dab0c0773c9ab1cef51875656c5b471c0a879501861"
+    },
+    "layer_34": {
+      "file": "layer_34.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "727bb8200e1845299e1ca426309cad8a6c8130cceda316d33b36b9f828142c86"
+    },
+    "layer_35": {
+      "file": "layer_35.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "7f8d02add697f4126c09f92449fbba8b42c7bbf83df7c07808d7770913670a2d"
+    },
+    "layer_36": {
+      "file": "layer_36.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "a7e06c7f81fb2f1f6b87a6310ce65da0e28e5d1f7bc1870746ace0b6c06211b3"
+    },
+    "layer_37": {
+      "file": "layer_37.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "55a4bd562c1409fa35b899e1aa6957459d20d9790f674b3baabfa0d43321a2a7"
+    },
+    "layer_38": {
+      "file": "layer_38.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "e427f282eb49e9bf1f6a303351d0d706c3a012d10a7119d21daf20d17063f931"
+    },
+    "layer_39": {
+      "file": "layer_39.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "7d3138c160cab370a2f105e29ab9300c7813cca02bc748e202df4c18fe7c4472"
+    },
+    "layer_40": {
+      "file": "layer_40.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "7d9b854a904730efc64e3d74ab748c501e7b993bd9ca25c3b1c7f0dbbe3ceaaf"
+    },
+    "layer_41": {
+      "file": "layer_41.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "a2a9556ef581059f305aff3678c936bd9379dd2891e30fd941ac3460b7e80945"
+    },
+    "layer_42": {
+      "file": "layer_42.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "11182eba6ce044ca17d0df63fed03c62c9d3536293430bf261093ff45907da78"
+    },
+    "layer_43": {
+      "file": "layer_43.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "c7996b0dda1a21cb84abd7c162628525423a79ca955c557fe425e30b32db95c2"
+    },
+    "layer_44": {
+      "file": "layer_44.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "7e82ed42a0ba96052a0aef84f0d1d00b7bec7b0a010ddd22c0cbf87abd94a4f3"
+    },
+    "layer_45": {
+      "file": "layer_45.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "10f0f09b947fd9e41c0b52ab4194fdddde85167632bffca6b40b821ed5bbe17d"
+    },
+    "layer_46": {
+      "file": "layer_46.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "55cc4891200935cec2481ff84bf6fdb266228eb63221f4ce13aa79e9c26e169e"
+    },
+    "layer_47": {
+      "file": "layer_47.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "ab47b972e76e79b3634e06631af5b199dfeb81c9cdeb0801542acea36db865b3"
+    },
+    "final_norm": {
+      "file": "final_norm.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        5120
+      ],
+      "bytes": 40960,
+      "sha256": "87463a7b956f091060759cdce099f0d8503e5854dc5580435ba16f85cbfaae8e"
+    },
+    "logits": {
+      "file": "logits.bf16.bin",
+      "dtype": "BF16",
+      "shape": [
+        1,
+        4,
+        152064
+      ],
+      "bytes": 1216512,
+      "sha256": "6533340fd5b05dff32e70e987eafb58f630438bc6c4593badd48ebdbaba7d532"
+    }
+  },
+  "formal_serving_runtime_uses_torch": false,
+  "performance_claim": false
+}

@@ -1,0 +1,144 @@
+{
+  "format": "statecentric-issue59-on-device-sampling-identity-v2",
+  "identity_sha256": "c0781f17cb4cf5fc5547ccef5c2f31341923582de763b7fd0ecf97baaebc9e41",
+  "image": {
+    "id": "sha256:f4c89c293e076453e9eef9edb5fb9669740dccbd3c48619a9f976d775fc29b81",
+    "reference": "quay.io/ascend/vllm-ascend:v0.23.0rc1-openeuler"
+  },
+  "implementation_commit": "0edb3ec38ce076b906597db5ef170d3f30b1bfc2",
+  "issue": 59,
+  "records": {
+    "artifact_preparer": {
+      "bytes": 5601,
+      "path": "/tmp/statecentric-issue59/scripts/prepare_issue59_sampling_20260816_r4.sh",
+      "sha256": "408b52eaef02e396de1eae218c71254a7d4e74fd8a834ab8472742d79a66dd4b"
+    },
+    "beam_oracle": {
+      "bytes": 1041,
+      "path": "/tmp/statecentric-issue59/benchmarks/issue59_beam_oracle_20260816_r1.json",
+      "sha256": "2549dea4cf1822d01a98050f611640e24ec84039941702b8c921ddf812c7772c"
+    },
+    "beam_params": {
+      "bytes": 247,
+      "path": "/tmp/statecentric-issue59/benchmarks/issue59_beam_params_20260816_r1.json",
+      "sha256": "4dda3dbf10721f0bff804dd1f761856a45fde0d0a9011128703203f211102c64"
+    },
+    "categorical_oracle": {
+      "bytes": 935,
+      "path": "/tmp/statecentric-issue59/benchmarks/issue59_categorical_oracle_20260816_r1.json",
+      "sha256": "9cdccea59cb5ad13ff6d7f9aeae3487dcb197504803c4fc325450806b68d820b"
+    },
+    "categorical_params": {
+      "bytes": 255,
+      "path": "/tmp/statecentric-issue59/benchmarks/issue59_categorical_params_20260816_r1.json",
+      "sha256": "95ab5f3be6d25cee222be252e298de5163acf29a5db7922fa3eddcd5cd6ce58c"
+    },
+    "compatibility_digest": {
+      "bytes": 357056,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-rust-bundle-r4/state_compatibility_digest",
+      "sha256": "d5fb5dd4c090503342ebc7024759016d6bfb59212f19646a523a6f70f43cce93"
+    },
+    "cpp_producer_closure": {
+      "bytes": 31809,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-artifact-20260816-r4/native_cpp_producer_closure.json",
+      "sha256": "397b382e29e5c3e167c4997df5017db473ea38cb6ddc5b783e72237de910a45a"
+    },
+    "execution_artifact_identity": {
+      "bytes": 360,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-artifact-20260816-r4/execution_artifact_identity.bin",
+      "sha256": "91fd0ed6dc24678f143188ca3980c2a2362e0c35cd10dfdf30347e1309a48be9"
+    },
+    "execution_config": {
+      "bytes": 256,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-artifact-20260816-r4/execution_config.bin",
+      "sha256": "e182d343da01c9186b089a374c0f407c761a64e06181c648723fbac6f2a26f1f"
+    },
+    "gate_runner": {
+      "bytes": 14777,
+      "path": "/tmp/statecentric-issue59/scripts/run_issue59_sampling_20260816_r5_gate.sh",
+      "sha256": "0de984e20e2ac032e6d03fb99eda4e9af91d5bbff71396a1e1d634d49d3c34a3"
+    },
+    "global_manifest": {
+      "bytes": 1632,
+      "path": "/home/shuhao/statecentric-ascend-engine/.benchmarks/issue8-capacity17-20260812-r6/global_pack/global_manifest.json",
+      "sha256": "5922b55ba03d371388d7fc68b4a4e55a152c1ce33917d057f534a83beaee1a4f"
+    },
+    "identity_freezer": {
+      "bytes": 4323,
+      "path": "/tmp/statecentric-issue59/benchmarks/freeze_issue59_sampling_r5_identity.py",
+      "sha256": "3cbaa6c465155ee0d66caa6632b1f5030a2fbfd517970e86322bb69bbfa47096"
+    },
+    "layers_manifest": {
+      "bytes": 233565,
+      "path": "/home/shuhao/statecentric-ascend-engine/.benchmarks/issue8-capacity17-20260812-r8/worker_layers/all_layers_manifest.json",
+      "sha256": "a1c0e8156dd20fa06fb97b45a3c19a37c330b06d33cdcd9f37277d8f272e0530"
+    },
+    "logits_bf16": {
+      "bytes": 1216512,
+      "path": "/home/shuhao/statecentric-ascend-engine/.benchmarks/issue8-capacity17-20260812-r8/full_oracle_4/logits.bf16.bin",
+      "sha256": "6533340fd5b05dff32e70e987eafb58f630438bc6c4593badd48ebdbaba7d532"
+    },
+    "model_manifest": {
+      "bytes": 168249,
+      "path": "/home/shuhao/statecentric-ascend-engine/.benchmarks/issue8-capacity17-20260812-r8/model_manifest.json",
+      "sha256": "a361693076e1f8e073711796b40269973396ad4b7ed4373a57bf9b6eafdc1912"
+    },
+    "native_launcher": {
+      "bytes": 222084,
+      "path": "/tmp/statecentric-issue59/scripts/run_native_http_npu_probe.sh",
+      "sha256": "75cc7ffc5724c9043e955af8a678a723def90f1365725856caf3c0a3183ed3ec"
+    },
+    "native_server": {
+      "bytes": 2993680,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-rust-bundle-r4/native_state_engine",
+      "sha256": "7e42e3e85f73d1df0ae2eb4dcd92a1019d2e9a0301044d07de5551e9a6621725"
+    },
+    "native_state_identity": {
+      "bytes": 3002,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-artifact-20260816-r4/native_state_identity.json",
+      "sha256": "604fc9840afb65a6bcdc65a1861ad9a342e376a60c7fa36f0be57b01e1330cb4"
+    },
+    "native_worker": {
+      "bytes": 889304,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-cpp-build-r4/statecentric_resident_full_model_probe",
+      "sha256": "ee4da1319d40596e950f455142f343db47df2d22ac27ef0aa4e277d49ad881ab"
+    },
+    "pack_digest_cache_seed": {
+      "bytes": 36125,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-pack-digest-cache-20260816-r2.tsv",
+      "sha256": "0b4aeea27ca31d1cb5daba9da3ea0569be24585c21fb9b975519acc44374950f"
+    },
+    "plan_inspector": {
+      "bytes": 154352,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-cpp-build-r4/statecentric_qwen2_resident_plan_inspect",
+      "sha256": "d943624cbcb6c2feb287246a8ea1cb4f1c728f9bbed5647ae134ed6bfa132d34"
+    },
+    "preregistration": {
+      "bytes": 2509,
+      "path": "/tmp/statecentric-issue59/benchmarks/issue59_sampling_20260816_r5_preregistration.json",
+      "sha256": "af10d166162de8a1889da015134a3ce8e6d732b9c3266a66a577e7c067e8d5fa"
+    },
+    "prompt_manifest": {
+      "bytes": 13855,
+      "path": "/home/shuhao/statecentric-ascend-engine/.benchmarks/issue8-capacity17-20260812-r8/full_oracle_4/manifest.json",
+      "sha256": "38aae938012da96bab02e0e73787bab06ee1c166c8813364f43d0a80b6b0a1ca"
+    },
+    "rust_bundle_manifest": {
+      "bytes": 19952,
+      "path": "/tmp/statecentric-issue59/.benchmarks/issue59-sampling-rust-bundle-r4/manifest.json",
+      "sha256": "6c422c87445292b560190769f86a24e3477d7c9b0244faddfbfbe8c45ae517f9"
+    },
+    "sampling_probe": {
+      "bytes": 12467,
+      "path": "/tmp/statecentric-issue59/benchmarks/issue59_sampling_probe.py",
+      "sha256": "3c8f3b512e0e0c3de806de02857fc528c5e0803c5b5bc7a8549bf5ff47bf7455"
+    },
+    "sampling_probe_test": {
+      "bytes": 5129,
+      "path": "/tmp/statecentric-issue59/benchmarks/test_issue59_sampling_probe.py",
+      "sha256": "a33a9a91eef9dc57274a709978eaa13daeb6bf61c86db04fff4298ae80742cd4"
+    }
+  },
+  "schema_version": 1,
+  "version": "issue59-on-device-sampling-20260816-r5"
+}

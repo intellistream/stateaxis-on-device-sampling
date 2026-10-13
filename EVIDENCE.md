@@ -4,6 +4,10 @@
   (`manager-contract-mock-worker-non-performance`).
 - Frozen real-NPU cell: `evidence/ISSUE59_ON_DEVICE_SAMPLING_CLOSURE_20260816.md`
   (`historical-real-npu-fresh-process-negative`).
+- Complete frozen bundle:
+  `evidence/issue59-on-device-sampling-20260816-r5-3plus3/`, including all six
+  arm runs, raw requests, NPU/lifecycle records, cleanup status, and a
+  repo-local SHA-256 manifest.
 
 The historical cell establishes scoped exactness and a negative fresh-process
 performance result for Qwen2.5-14B. It does not establish a universal negative
