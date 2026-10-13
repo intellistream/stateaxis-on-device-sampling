@@ -20,6 +20,8 @@ and p95 latency by 80.131%. Steady device sampling took roughly 0.356--0.359 ms;
 first use took 76.8--79.7 ms. This is a scoped negative result, not a universal
 claim about other models or workloads, so the MOD remains experimental and
 performance-unqualified.
+The complete six-run evidence bundle is vendored under
+`evidence/issue59-on-device-sampling-20260816-r5-3plus3/`.
 
 Current ECPA evidence covers digest binding, default-off refusal, ON effect
 counters, continuation identity, bounded beam cleanup, and Manager launch

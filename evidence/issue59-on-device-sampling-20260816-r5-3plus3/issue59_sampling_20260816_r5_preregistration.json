@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "format": "statecentric-issue59-on-device-sampling-preregistration-v2",
+  "issue": 59,
+  "version": "issue59-on-device-sampling-20260816-r5",
+  "image": "quay.io/ascend/vllm-ascend:v0.23.0rc1-openeuler",
+  "control": "canonical greedy request using the unchanged protocol frame and device argmax",
+  "candidate": "explicit identity-bound on-device categorical and beam sampling",
+  "frozen_config": {
+    "state_capacity": 17,
+    "physical_cache_blocks": 256,
+    "max_prefill_rows": 36864,
+    "max_decode_batch": 4,
+    "scheduler_max_batch_size": 1,
+    "client_concurrency": 4,
+    "workspace_bytes": 5905580032
+  },
+  "diagnosed_r3_divergence": {
+    "classification": "upstream_bf16_logit_drift_not_sampler_ordering",
+    "reference_equal_logit_tokens": [11, 320],
+    "reference_equal_logit": 16.875,
+    "native_inferred_logits": {"11": 16.75, "320": 16.875},
+    "bf16_ulp_at_reference_logit": 0.125,
+    "temperature": 0.8,
+    "analytic_logprob_atol": 0.15625,
+    "r1_r2_r3_evidence_preserved": true
+  },
+  "r4_timing_correction": {
+    "r4_correctness_accepted": true,
+    "r4_performance_summary_rejected": true,
+    "reason": "candidate wall interval included three additional beam-correctness requests while control did not",
+    "r5_measured_interval": "from immediately before the first measured request through immediately after the eighth measured response",
+    "beam_correctness_outside_measured_interval": true,
+    "r4_evidence_preserved": true
+  },
+  "admission": {
+    "repetitions_per_arm": 1,
+    "candidate_measured_requests": 8,
+    "requires_exact_selected_tokens": true,
+    "requires_exact_rng_offsets": true,
+    "requires_exact_top_logprob_token_set": true,
+    "rank_permutation_allowed_only_within_reference_exact_logprob_ties": true,
+    "logprob_atol": 0.15625,
+    "requires_one_bounded_preprocessor_input_top8_trace": true,
+    "requires_beam_state_forks_without_leaks": true,
+    "requires_sampling_calls_positive": true,
+    "production_sampling_full_logits_d2h_bytes": 0
+  },
+  "repeat": {
+    "repetitions_per_arm": 3,
+    "fresh_process_per_run": true,
+    "digest_cache_seed": "first real r1 control cache after fail-closed full-byte hash; every stat tuple is revalidated",
+    "counterbalanced_order": true,
+    "sampling_input_trace": false,
+    "only_after_admission": true
+  },
+  "claims": {
+    "greedy_overhead_guard_percent": 1.0,
+    "speedup_without_matched_repeat": false,
+    "performance_claim_before_repeat": false
+  }
+}
